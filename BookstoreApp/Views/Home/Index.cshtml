@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+
+    <!-- Hero section -->
+    <div class="row align-items-center mb-5 g-4">
+
+        <div class="col-md-6">
+
+            <h1 class="display-5 fw-bold">
+                Bookstore WebApp
+            </h1>
+
+            <p class="lead mt-3">
+                A simple and clean ASP.NET Core web application to manage books
+                with full CRUD operations, search, pagination and REST APIs.
+            </p>
+
+            <ul class="mt-3">
+                <li>Manage books easily</li>
+                <li>Search by title and author</li>
+                <li>Pagination for large data</li>
+                <li>Server and client side validation</li>
+                <li>REST APIs with Swagger documentation</li>
+            </ul>
+
+            <div class="mt-4">
+
+                <!-- Main CTA -->
+                <a asp-controller="Books"
+                   asp-action="Index"
+                   class="btn btn-primary btn-lg me-2">
+                    Go to Books
+                </a>
+
+                <!-- Swagger shortcut -->
+                <a href="/swagger"
+                   target="_blank"
+                   class="btn btn-outline-secondary btn-lg">
+                    View API (Swagger)
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6 text-center">
+
+            <!-- Simple visual card -->
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+
+                    <h5 class="card-title mb-3">
+                        Project Highlights
+                    </h5>
+
+                    <p class="card-text text-start">
+                        ✔ Built using ASP.NET Core MVC<br />
+                        ✔ Entity Framework Core with SQLite<br />
+                        ✔ Clean layered structure<br />
+                        ✔ Production-ready validation<br />
+                        ✔ API + UI in a single solution
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Feature cards -->
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Book Management</h5>
+                    <p class="card-text">
+                        Create, edit, view and delete books using a clean and responsive UI.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Search & Pagination</h5>
+                    <p class="card-text">
+                        Quickly filter books by title or author and browse large lists efficiently.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">REST APIs</h5>
+                    <p class="card-text">
+                        Access the same data through documented APIs using Swagger.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

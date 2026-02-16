@@ -1,0 +1,150 @@
+﻿@model IEnumerable<BookstoreApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<!-- Page heading -->
+<h2 class="mb-3">Books</h2>
+
+<!-- Search form -->
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+
+    <!-- Search textbox -->
+    <div class="col-md-6">
+        <input type="text"
+               name="searchString"
+               value="@ViewData["CurrentFilter"]"
+               class="form-control"
+               placeholder="Search by title or author" />
+    </div>
+
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-outline-primary w-100">
+            Search
+        </button>
+    </div>
+
+    <div class="col-md-3">
+        <a asp-action="Index" class="btn btn-outline-secondary w-100">
+            Clear
+        </a>
+    </div>
+
+</form>
+
+
+
+<!-- Button to go to create page -->
+<p>
+    <a asp-action="Create" class="btn btn-success">
+        + Add New Book
+    </a>
+</p>
+
+<!-- Bootstrap styled table -->
+<table class="table table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <!-- Column headers -->
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th style="width:200px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--if the list coming from controller is empty-->
+        @if (!Model.Any())
+        {
+            <!-- Message when no records are found -->
+            <tr>
+                <td colspan="5">
+                    <div class="alert alert-info mb-0">
+                        No books found for your search.
+                    </div>
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <!-- Display each property -->
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.Genre</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">
+                            Edit
+                        </a>
+
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">
+                            Details
+                        </a>
+
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+</table>
+
+@{
+    int currentPage = ViewData["CurrentPage"] != null
+        ? (int)ViewData["CurrentPage"]
+        : 1;
+
+    int totalPages = ViewData["TotalPages"] != null
+        ? (int)ViewData["TotalPages"]
+        : 1;
+
+    string currentFilter = ViewData["CurrentFilter"] as string;
+}
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+
+        <!-- Previous button -->
+        <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pageNumber="@(currentPage - 1)"
+               asp-route-searchString="@currentFilter">
+                Previous
+            </a>
+        </li>
+
+        <!-- Page numbers -->
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            <li class="page-item @(i == currentPage ? "active" : "")">
+                <a class="page-link"
+                   asp-action="Index"
+                   asp-route-pageNumber="@i"
+                   asp-route-searchString="@currentFilter">
+                    @i
+                </a>
+            </li>
+        }
+
+        <!-- Next button -->
+        <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+            <a class="page-link"
+               asp-action="Index"
+               asp-route-pageNumber="@(currentPage + 1)"
+               asp-route-searchString="@currentFilter">
+                Next
+            </a>
+        </li>
+
+    </ul>
+</nav>
