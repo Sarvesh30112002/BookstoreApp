@@ -229,7 +229,7 @@ This ensures:
 
 ### Step 1 – Clone the repository
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`git clone` 
+`git clone` 
 
 or download the ZIP and extract it.
 
@@ -237,7 +237,7 @@ or download the ZIP and extract it.
 
 Open the solution file in Visual Studio:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   BookstoreApp.sln   `
+`   BookstoreApp.sln   `
 
 ### Step 3 – Restore packages
 
@@ -245,21 +245,20 @@ Visual Studio restores NuGet packages automatically.
 
 If required:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   dotnet restore   `
+`   dotnet restore   `
 
 ### Step 4 – Create database
 
 Open **Package Manager Console** in Visual Studio and run:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Update-Database   `
+`   Update-Database   `
 
 This will create the SQLite database automatically.
 
 ### Step 5 – Run the application
 
 Click:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Start (F5)   `
+`   Start (F5)   `
 
 The application will open in your browser.
 
@@ -270,16 +269,11 @@ The AI feature uses Gemini API.
 
 In appsettings.json:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   "Gemini": {    "ApiKey": "YOUR_GEMINI_API_KEY"  }   `
+`   "Gemini": {    "ApiKey": "YOUR_GEMINI_API_KEY"  }   `
 
-### Important
 
-Do NOT hardcode your API key inside code.
-
-🚫 Important – Do NOT push API keys to GitHub
 ---------------------------------------------
 
-Your API key must never be committed to source control.
 
 🔒 Recommended Safe Setup for API Keys
 --------------------------------------
@@ -288,25 +282,19 @@ Your API key must never be committed to source control.
 
 Create or use:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   appsettings.Development.json   `
+`   appsettings.Development.json   `
 
 Add:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "Gemini": {      "ApiKey": "YOUR_REAL_KEY"    }  }   `
+`   {    "Gemini": {      "ApiKey": "YOUR_REAL_KEY"    }  }   `
 
-### Step 2 – Keep appsettings.json clean
 
-In appsettings.json keep only:
+### Step 2 – Add appsettings.Development.json to .gitignore
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   "Gemini": {    "ApiKey": ""  }   `
+Open .gitignore and add:
 
-### Step 3 – Add appsettings.Development.json to .gitignore
+`   appsettings.Development.json   `
 
-Open or create .gitignore and add:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   appsettings.Development.json   `
-
-This prevents leaking your key.
 
 📁 Project Structure (Simplified)
 
@@ -346,4 +334,4 @@ The application is implemented using:
 👤 Author
 ---------
 
-Sarvesh HadoleSoftware Engineer
+Sarvesh Hadole, Software Engineer
