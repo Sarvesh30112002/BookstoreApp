@@ -118,7 +118,7 @@ namespace BookstoreApp.Controllers
         // POST: /Books/Create
         // Saves new book to database
         [HttpPost]
-        [ValidateAntiForgeryToken] // Security: prevents CSRF attack
+        [ValidateAntiForgeryToken] // Security
         public async Task<IActionResult> Create(Book book)
         {
             // Check validation based on data annotations

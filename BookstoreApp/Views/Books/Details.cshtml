@@ -66,18 +66,26 @@
 @section Scripts
 {
     <script>
-        document.getElementById("loadSummaryBtn")
-            .addEventListener("click", async function () {
+        const btn = document.getElementById("loadSummaryBtn");
+        const box = document.getElementById("aiSummaryBox");
 
-                const box = document.getElementById("aiSummaryBox");
-                box.classList.remove("d-none");
-                box.innerText = "Generating summary...";
+        let alreadyClicked = false; // page-level memory
 
-                const response = await fetch('/Books/GetAiSummary?id=@Model.Id');
+        btn.addEventListener("click", async function () {
 
-                const data = await response.json();
+            // Prevent multiple clicks
+            if (alreadyClicked) return;
 
-                box.innerText = data.summary;
-            });
+            alreadyClicked = true;
+            btn.disabled = true; // freeze button
+
+            box.classList.remove("d-none");
+            box.innerText = "Generating summary...";
+
+            const response = await fetch('/Books/GetAiSummary?id=@Model.Id');
+            const data = await response.json();
+
+            box.innerText = data.summary;
+        });
     </script>
 }

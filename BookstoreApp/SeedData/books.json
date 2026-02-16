@@ -6,149 +6,156 @@
     "Price": 499
   },
   {
-    "Title": "Learning C#",
-    "Author": "Microsoft Team",
+    "Title": "Clean Code",
+    "Author": "Robert C. Martin",
     "Genre": "Programming",
-    "Price": 399
-  },
-  {
-    "Title": "JavaScript for Beginners",
-    "Author": "John Smith",
-    "Genre": "Web",
-    "Price": 299
-  },
-  {
-    "Title": "Entity Framework Core Guide",
-    "Author": "Jane Doe",
-    "Genre": "Database",
-    "Price": 449
-  },
-  {
-    "Title": "Clean Code in C#",
-    "Author": "Robert Martin",
-    "Genre": "Programming",
-    "Price": 550
-  },
-  {
-    "Title": "Web Development with ASP.NET Core",
-    "Author": "Mark Brown",
-    "Genre": "Web",
-    "Price": 520
-  },
-  {
-    "Title": "Modern JavaScript",
-    "Author": "Kyle Simpson",
-    "Genre": "Web",
-    "Price": 410
-  },
-  {
-    "Title": "REST APIs with .NET",
-    "Author": "Alex Green",
-    "Genre": "Backend",
-    "Price": 460
-  },
-  {
-    "Title": "Building Microservices in .NET",
-    "Author": "Chris White",
-    "Genre": "Backend",
-    "Price": 580
-  },
-  {
-    "Title": "SQL and Databases",
-    "Author": "Data Team",
-    "Genre": "Database",
-    "Price": 300
-  },
-
-  {
-    "Title": "C# Design Patterns",
-    "Author": "Gamma Team",
-    "Genre": "Programming",
-    "Price": 530
-  },
-  {
-    "Title": "Secure Web Apps in ASP.NET",
-    "Author": "Security Lab",
-    "Genre": "Security",
-    "Price": 480
-  },
-  {
-    "Title": "Full Stack Development",
-    "Author": "Tech Academy",
-    "Genre": "Web",
-    "Price": 600
-  },
-  {
-    "Title": "Advanced Entity Framework",
-    "Author": "Jane Doe",
-    "Genre": "Database",
-    "Price": 470
-  },
-  {
-    "Title": "LINQ in Action",
-    "Author": "Tom Clark",
-    "Genre": "Programming",
-    "Price": 350
-  },
-  {
-    "Title": "Cloud Ready .NET Apps",
-    "Author": "Azure Team",
-    "Genre": "Cloud",
-    "Price": 590
-  },
-  {
-    "Title": "Software Architecture Basics",
-    "Author": "Martin Fowler",
-    "Genre": "Architecture",
     "Price": 650
   },
   {
-    "Title": "Testing .NET Applications",
-    "Author": "QA Team",
-    "Genre": "Testing",
-    "Price": 340
+    "Title": "The Pragmatic Programmer",
+    "Author": "Andrew Hunt",
+    "Genre": "Programming",
+    "Price": 620
   },
   {
-    "Title": "API Design Best Practices",
-    "Author": "REST Group",
-    "Genre": "Backend",
-    "Price": 420
+    "Title": "Design Patterns",
+    "Author": "Erich Gamma",
+    "Genre": "Software Engineering",
+    "Price": 720
   },
   {
-    "Title": "Docker for .NET Developers",
-    "Author": "DevOps Lab",
-    "Genre": "DevOps",
-    "Price": 510
-  },
-
-  {
-    "Title": "Agile Development with C#",
-    "Author": "Scrum Team",
-    "Genre": "Process",
-    "Price": 370
+    "Title": "Refactoring",
+    "Author": "Martin Fowler",
+    "Genre": "Programming",
+    "Price": 680
   },
   {
-    "Title": "Blazor in Practice",
-    "Author": "UI Team",
-    "Genre": "Frontend",
-    "Price": 440
+    "Title": "You Don’t Know JS",
+    "Author": "Kyle Simpson",
+    "Genre": "JavaScript",
+    "Price": 450
   },
   {
-    "Title": "Real World ASP.NET Core",
-    "Author": "Pro Devs",
-    "Genre": "Web",
-    "Price": 560
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "Genre": "C#",
+    "Price": 640
   },
   {
-    "Title": "Clean Architecture in .NET",
-    "Author": "Uncle Bob",
-    "Genre": "Architecture",
+    "Title": "ASP.NET Core in Action",
+    "Author": "Andrew Lock",
+    "Genre": ".NET",
     "Price": 610
   },
   {
-    "Title": "Backend Engineering with C#",
-    "Author": "System Team",
+    "Title": "Head First Design Patterns",
+    "Author": "Eric Freeman",
+    "Genre": "Architecture",
+    "Price": 590
+  },
+  {
+    "Title": "Domain-Driven Design",
+    "Author": "Eric Evans",
+    "Genre": "Architecture",
+    "Price": 730
+  },
+  {
+    "Title": "Building Microservices",
+    "Author": "Sam Newman",
     "Genre": "Backend",
+    "Price": 670
+  },
+
+  {
+    "Title": "RESTful Web APIs",
+    "Author": "Leonard Richardson",
+    "Genre": "Backend",
+    "Price": 540
+  },
+  {
+    "Title": "Patterns of Enterprise Application Architecture",
+    "Author": "Martin Fowler",
+    "Genre": "Architecture",
+    "Price": 760
+  },
+  {
+    "Title": "Pro ASP.NET Core MVC",
+    "Author": "Adam Freeman",
+    "Genre": ".NET",
+    "Price": 620
+  },
+  {
+    "Title": "Effective C#",
+    "Author": "Bill Wagner",
+    "Genre": "C#",
+    "Price": 570
+  },
+  {
+    "Title": "Clean Architecture",
+    "Author": "Robert C. Martin",
+    "Genre": "Architecture",
+    "Price": 690
+  },
+
+  {
+    "Title": "JavaScript: The Good Parts",
+    "Author": "Douglas Crockford",
+    "Genre": "JavaScript",
     "Price": 480
+  },
+  {
+    "Title": "Release It!",
+    "Author": "Michael Nygard",
+    "Genre": "Backend",
+    "Price": 600
+  },
+  {
+    "Title": "Site Reliability Engineering",
+    "Author": "Google",
+    "Genre": "DevOps",
+    "Price": 710
+  },
+  {
+    "Title": "The Art of Unit Testing",
+    "Author": "Roy Osherove",
+    "Genre": "Testing",
+    "Price": 520
+  },
+  {
+    "Title": "Microservices Patterns",
+    "Author": "Chris Richardson",
+    "Genre": "Backend",
+    "Price": 690
+  },
+
+  {
+    "Title": "Docker Deep Dive",
+    "Author": "Nigel Poulton",
+    "Genre": "DevOps",
+    "Price": 540
+  },
+  {
+    "Title": "Accelerate",
+    "Author": "Nicole Forsgren",
+    "Genre": "Engineering",
+    "Price": 580
+  },
+  {
+    "Title": "Working Effectively with Legacy Code",
+    "Author": "Michael Feathers",
+    "Genre": "Programming",
+    "Price": 650
+  },
+  {
+    "Title": "Test Driven Development",
+    "Author": "Kent Beck",
+    "Genre": "Testing",
+    "Price": 500
+  },
+  {
+    "Title": "Software Architecture in Practice",
+    "Author": "Len Bass",
+    "Genre": "Architecture",
+    "Price": 720
   }
 ]
